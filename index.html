@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Converter</title>
+</head>
+<body>
+    <h1>File Converter</h1>
+    
+    <form action="convert.php" method="post" enctype="multipart/form-data">
+        <label for="inputFile">Pilih File:</label>
+        <input type="file" name="inputFile" id="inputFile" accept=".pdf, .xlsx">
+        
+        <label for="outputFormat">Pilih Format Output:</label>
+        <select name="outputFormat" id="outputFormat">
+            <option value="doc">Word (DOC)</option>
+            <option value="txt">Plain Text (TXT)</option>
+            <!-- Tambahkan opsi format output lainnya sesuai kebutuhan -->
+        </select>
+        
+        <button type="submit">Konversi</button>
+    </form>
+</body>
+</html>
