@@ -10,13 +10,16 @@
     
     <form action="convert.php" method="post" enctype="multipart/form-data">
         <label for="inputFile">Pilih File:</label>
-        <input type="file" name="inputFile" id="inputFile" accept=".pdf, .xlsx">
+        <input type="file" name="inputFile" id="inputFile" accept=".pdf, .doc, .xlsx">
         
         <label for="outputFormat">Pilih Format Output:</label>
         <select name="outputFormat" id="outputFormat">
             <option value="doc">Word (DOC)</option>
-            <option value="txt">Plain Text (TXT)</option>
-            <!-- Tambahkan opsi format output lainnya sesuai kebutuhan -->
+            <option value="pdf">PDF (PDF)</option>
+            <option value="pptx">Power Point(PPTX)</option>
+            <option value="jpg">Image (JPG)</option>
+            <option value="xlsx">Excel (XLSX)</option>
+            
         </select>
         
         <button type="submit">Konversi</button>

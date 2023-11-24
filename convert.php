@@ -1,17 +1,22 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Menggunakan command line untuk konversi file, pastikan tool konversi sudah terinstal di server Linux
+    //command line untuk konversi file
     $inputFile = $_FILES["inputFile"]["tmp_name"];
     $outputFormat = $_POST["outputFormat"];
     
-    // Tentukan nama file output sesuai kebutuhan
+    //nama file output
     $outputFile = "converter." . $outputFormat;
     
-    // Contoh command untuk konversi PDF ke Word menggunakan pdftotext
+    //command untuk konversi
     if ($outputFormat == "doc") {
-        system("pdftotext $inputFile $outputFile");
-    } elseif ($outputFormat == "txt") {
-        // Contoh command untuk konversi Excel ke Word menggunakan tool lain (misalnya unoconv)
+        system("unoconv -f $outputFormat -o $outputFile $inputFile");
+    } elseif ($outputFormat == "pptx") {
+        system("unoconv -f $outputFormat -o $outputFile $inputFile");
+    }elseif ($outputFormat == "jpg") {
+        system("unoconv -f $outputFormat -o $outputFile $inputFile");
+    }elseif ($outputFormat == "xlsx") {
+        system("unoconv -f $outputFormat -o $outputFile $inputFile");
+    }elseif ($outputFormat == "pdf") {
         system("unoconv -f $outputFormat -o $outputFile $inputFile");
     }
 
