@@ -1,7 +1,7 @@
 # ConverterPDF
 Project Jaringan Komputer Kelompok 8
 
-*Website Converter PDF ke format lain dan sebaliknya menggunakan UNOCONV PYTHON dan bahasa HTML serta PHP.*
+*Website Converter PDF ke format lain dan sebaliknya menggunakan UNOCONV PYTHON yang memanfaatkan LIBREOFFICE dan bahasa HTML serta PHP.*
 
 Anggota Kelompok:
 
