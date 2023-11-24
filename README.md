@@ -7,6 +7,6 @@ Anggota Kelompok:
 
 Rajanuar Oky Giono (5322600002) "RajanuarOky"
 
-M Daffa Husen N (5322600024) "Daffanad"
+M Daffa Husen N (5322600024) "daffanad"
 
 Shabrina Putri Rahmawati (5322600008) "shabrinaputri19"
