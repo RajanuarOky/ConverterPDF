@@ -7,7 +7,7 @@ if (isset($_POST['merge'])) {
 
     $outputFile = $uploadsDirectory . 'combined.pdf';
 
-    // Use pdftk to merge PDFs
+    // Code Merge pdftknya
     $cmd = "pdftk \"$file1\" \"$file2\" cat output \"$outputFile\"";
     exec($cmd);
 
