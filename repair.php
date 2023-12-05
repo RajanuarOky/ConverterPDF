@@ -1,18 +1,17 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $inputFile = $_FILES["pdfFile"]["tmp_name"];
+    $outputFormat = "pdf";
+
+    $outputFile = pathinfo($_FILES['pdfFile']['name'], PATHINFO_FILENAME) . '_repair.' . $outputFormat;
+
     $targetDir = "./";
     $targetFile = $targetDir . basename($_FILES["pdfFile"]["name"]);
     $uploadOk = 1;
     $fileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
 
-
     if ($fileType != "pdf") {
         echo "Hanya file PDF yang diizinkan.";
-        $uploadOk = 0;
-    }
-
-    if ($_FILES["pdfFile"]["size"] > 5000000) {
-        echo "Maaf, file Anda terlalu besar.";
         $uploadOk = 0;
     }
 
@@ -21,13 +20,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Maaf, file Anda tidak diunggah.";
     } else {
         if (move_uploaded_file($_FILES["pdfFile"]["tmp_name"], $targetFile)) {
-            $outputFile = "outputrepair.pdf";
             $command = "pdftk $targetFile output $outputFile";
             exec($command);
 
-            echo "File PDF berhasil diperbaiki. <a href='$outputFile'>Unduh file</a>";
-        } else {
-            echo "Kesalahan saat mengunggah file Anda.";
+            // Set header untuk auto unduh
+            header('Content-Type: application/pdf');
+            header('Content-Disposition: attachment; filename="' . $outputFile . '"');
+            header('Cache-Control: no-cache, no-store, must-revalidate');
+            header('Pragma: no-cache');
+            header('Expires: 0');
+
+            // Output file ke browser
+            readfile($outputFile);
+
+            // Hapus file setelah di-unduh
+            unlink($targetFile);
+            unlink($outputFile);
+
+            exit();
         }
     }
 }

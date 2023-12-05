@@ -3,7 +3,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $inputFile = $_FILES["inputFile"]["tmp_name"];
     $outputFormat = $_POST["outputFormat"];
 
-    $outputFile = pathinfo($_FILES['inputFile']['name'], PATHINFO_FILENAME) . '_converted.' . $outputFormat;
+    $outputFile = pathinfo($_FILES['inputFile']['name'], PATHINFO_FILENAME) . '_converted' . $outputFormat;
 
     // Command unoconv untuk konversi
     if ($outputFormat == "doc" || $outputFormat == "pptx" || $outputFormat == "jpg" || $outputFormat == "xlsx" || $outputFormat == "pdf") {
