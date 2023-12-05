@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./dist/style.css" rel="stylesheet">
+    <title>Feature</title>
+</head>
+<body>
+	<nav class="border-b-4 border-l-stone-950 relative px-4 py-4 flex justify-between items-center bg-white">
+		<a class="font-bold leading-none" href="index.html">
+			<img class="w-4/5" src="src/asset/Logo.png" href="index.html" alt="">
+		</a>
+
+		<div class="lg:hidden">
+			<button class="navbar-burger flex items-center text-black p-3">
+				<svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<title>Mobile menu</title>
+					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+				</svg>
+			</button>
+		</div>
+	</nav>
+	
+	<div class="navbar-menu relative z-50 hidden">
+		<div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+		<nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+			<div class="flex items-center mb-8">
+				<a class="mr-auto text-3xl font-bold leading-none" href="index.html">
+					<img src="src/asset/Logo.png" href="index.html" alt="">
+				</a>
+				<button class="navbar-close">
+					<svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+		</nav>
+	</div>
+
+    <div class="px-8 mt-6">
+        <div>
+            <p class="text-2xl text-center font-extrabold text-gray-900">Most Popular PDF Tools</p>
+            <p class="mt-3 text-xs text-center font-medium">6 tools to convert, compress, and edit PDFs for free. Try it out today!</p>
+        </div>
+		<div class="mt-6">
+				<div class="flex flex-wrap justify-center">
+
+					<div class="card w-full md:mr-6 mb-6 md:ml-6 md:mt-6 lg:w-1/4  md:px-10 flex flex-col justify-center">
+						<div class=" flex justify-center flex-col items-center">
+                            <p class="text-2xl font-bold">Convert PDF</p>
+                            <p class="text-lg md:text-sm md:px-4 mt-4 mx-auto justify-center text-center">Convert Word, PowerPoint and Excel files to and from PDF</p>
+                            <a  class="mt-6" href="convert.html">
+                                <button class=" md:mt-0 bg-gradient-to-b from-rose-400 to-rose-200 from-5% to-95% hover:bg-rose-200 text-white font-bold py-2 rounded-xl" style="padding: 10px 56px 10px 56px; ">Try Now</button>
+                            </a> 
+                                
+						</div>
+					</div>
+
+                    <div class="card w-full md:mr-6 mb-6 md:ml-6 md:mt-6 lg:w-1/4 md:px-6 flex flex-col justify-center">
+						<div class=" flex justify-center flex-col items-center">
+                            <p class="text-2xl font-bold">Compress PDF</p>
+                            <p class="text-lg md:text-sm md:px-4 mt-4 mx-auto justify-center text-center">Reduce the size of your PDF without losing quality.</p>
+                            <a class="mt-6" href="compress.html">
+                                <button class=" md:mt-0 bg-gradient-to-b from-rose-400 to-rose-200 from-5% to-95% hover:bg-rose-200 text-white font-bold py-2 rounded-xl" style="padding: 10px 56px 10px 56px; ">Try Now</button>
+                            </a> 
+                                
+						</div>
+					</div>
+
+                    <div class="card w-full md:mr-6 mb-6 md:ml-6 md:mt-6 lg:w-1/4 md:px-6 flex flex-col justify-center">
+						<div class=" flex justify-center flex-col items-center">
+                            <p class="text-2xl font-bold">Secure PDF</p>
+                            <p class="text-lg md:text-sm md:px-4 mt-4 mx-auto justify-center text-center">Add password and encrypt your PDF file.</p>
+                            <a class="mt-6" href="password.html">
+                                <button class=" md:mt-0 bg-gradient-to-b from-rose-400 to-rose-200 from-5% to-95% hover:bg-rose-200 text-white font-bold py-2 rounded-xl" style="padding: 10px 56px 10px 56px; ">Try Now</button>
+                            </a> 
+                                
+						</div>
+					</div>
+
+                    <div class="card w-full md:mr-6 mb-6 md:ml-6 md:mt-6 lg:w-1/4 md:px-6 flex flex-col justify-center">
+						<div class=" flex justify-center flex-col items-center">
+                            <p class="text-2xl font-bold">Repair PDF</p>
+                            <p class="text-lg md:text-sm md:px-4 mt-4 mx-auto justify-center text-center">Fix broken PDF files with this online PDF repair tool.</p>
+                            <a class="mt-6" href="repair.html">
+                                <button class=" md:mt-0 bg-gradient-to-b from-rose-400 to-rose-200 from-5% to-95% hover:bg-rose-200 text-white font-bold py-2 rounded-xl" style="padding: 10px 56px 10px 56px; ">Try Now</button>
+                            </a> 
+                                
+						</div>
+					</div>
+
+                    <div class="card w-full md:mr-6 mb-6 md:ml-6 md:mt-6 lg:w-1/4 md:px-6 flex flex-col justify-center">
+						<div class=" flex justify-center flex-col items-center">
+                            <p class="text-2xl font-bold">Rotate PDF</p>
+                            <p class="text-lg md:text-sm md:px-4 mt-4 mx-auto justify-center text-center">Rotate one or all pages in your PDF.</p>
+                            <a class="mt-6" href="rotate.html">
+                                <button class=" md:mt-0 bg-gradient-to-b from-rose-400 to-rose-200 from-5% to-95% hover:bg-rose-200 text-white font-bold py-2 rounded-xl" style="padding: 10px 56px 10px 56px; ">Try Now</button>
+                            </a> 
+                                
+						</div>
+					</div>
+
+                    <div class="card w-full md:mr-6 mb-6 md:ml-6 md:mt-6 lg:w-1/4 md:px-6 flex flex-col justify-center">
+						<div class=" flex justify-center flex-col items-center">
+                            <p class="text-2xl font-bold">Remove PDF</p>
+                            <p class="text-lg md:text-sm md:px-4 mt-4 mx-auto justify-center text-center">Remove one or mutiple pages from you PDF.</p>
+                            <a class="mt-6" href="delete.html">
+                                <button class=" md:mt-0 bg-gradient-to-b from-rose-400 to-rose-200 from-5% to-95% hover:bg-rose-200 text-white font-bold py-2 rounded-xl" style="padding: 10px 56px 10px 56px; ">Try Now</button>
+                            </a> 
+                                
+						</div>
+					</div>
+
+                    <div class="card w-full md:mr-6 mb-6 md:ml-6 md:mt-6 lg:w-1/4 md:px-6 flex flex-col justify-center">
+						<div class=" flex justify-center flex-col items-center">
+                            <p class="text-2xl font-bold">Watermark PDF</p>
+                            <p class="text-lg md:text-sm md:px-4 mt-4 mx-auto justify-center text-center">Stamp an image or text over your PDF in seconds.</p>
+                            <a class="mt-6" href="watermark.html">
+                                <button class=" md:mt-0 bg-gradient-to-b from-rose-400 to-rose-200 from-5% to-95% hover:bg-rose-200 text-white font-bold py-2 rounded-xl" style="padding: 10px 56px 10px 56px; ">Try Now</button>
+                            </a> 
+                                
+						</div>
+					</div>
+
+                    <div class="card w-full md:mr-6 mb-6 md:ml-6 md:mt-6 lg:w-1/4 md:px-6 flex flex-col justify-center">
+						<div class=" flex justify-center flex-col items-center">
+                            <p class="text-2xl font-bold">Merge PDF</p>
+                            <p class="text-lg md:text-sm md:px-4 mt-4 mx-auto justify-center text-center">Combine multiple PDFs into one unified document.</p>
+                            <a class="mt-6" href="merge.html">
+                                <button class=" md:mt-0 bg-gradient-to-b from-rose-400 to-rose-200 from-5% to-95% hover:bg-rose-200 text-white font-bold py-2 rounded-xl" style="padding: 10px 56px 10px 56px; ">Try Now</button>
+                            </a> 
+                                
+						</div>
+					</div>
+
+				</div>
+		</div>
+     </div>
+</body>
+<script>
+    // Burger menus
+    document.addEventListener('DOMContentLoaded', function() {
+        // open
+        const burger = document.querySelectorAll('.navbar-burger');
+        const menu = document.querySelectorAll('.navbar-menu');
+    
+        if (burger.length && menu.length) {
+            for (var i = 0; i < burger.length; i++) {
+                burger[i].addEventListener('click', function() {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+    
+        // close
+        const close = document.querySelectorAll('.navbar-close');
+        const backdrop = document.querySelectorAll('.navbar-backdrop');
+    
+        if (close.length) {
+            for (var i = 0; i < close.length; i++) {
+                close[i].addEventListener('click', function() {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+    
+        if (backdrop.length) {
+            for (var i = 0; i < backdrop.length; i++) {
+                backdrop[i].addEventListener('click', function() {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+    });
+</script> 
+</html>
