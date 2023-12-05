@@ -608,18 +608,14 @@ video {
   z-index: 50;
 }
 
-.m-auto {
-  margin: auto;
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .mb-1 {
@@ -846,12 +842,12 @@ video {
   --tw-gradient-from-position: 5%;
 }
 
-.to-rose-300 {
-  --tw-gradient-to: #fda4af var(--tw-gradient-to-position);
-}
-
 .to-rose-200 {
   --tw-gradient-to: #fecdd3 var(--tw-gradient-to-position);
+}
+
+.to-rose-300 {
+  --tw-gradient-to: #fda4af var(--tw-gradient-to-position);
 }
 
 .to-95\% {
@@ -920,14 +916,6 @@ video {
 
 .pt-6 {
   padding-top: 1.5rem;
-}
-
-.pl-4 {
-  padding-left: 1rem;
-}
-
-.pr-4 {
-  padding-right: 1rem;
 }
 
 .text-center {
@@ -1146,11 +1134,6 @@ video {
   background-color: rgb(254 205 211 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-rose-300:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(253 164 175 / var(--tw-bg-opacity));
-}
-
 .hover\:text-blue-600:hover {
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity));
@@ -1172,16 +1155,16 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:ml-6 {
+    margin-left: 1.5rem;
+  }
+
   .md\:mt-0 {
     margin-top: 0px;
   }
 
   .md\:mt-6 {
     margin-top: 1.5rem;
-  }
-
-  .md\:ml-6 {
-    margin-left: 1.5rem;
   }
 
   .md\:h-full {
@@ -1215,6 +1198,14 @@ video {
     padding-right: 5rem;
   }
 
+  .md\:pl-4 {
+    padding-left: 1rem;
+  }
+
+  .md\:pr-4 {
+    padding-right: 1rem;
+  }
+
   .md\:pr-6 {
     padding-right: 1.5rem;
   }
@@ -1227,27 +1218,19 @@ video {
     padding-top: 8rem;
   }
 
-  .md\:pl-4 {
-    padding-left: 1rem;
-  }
-
-  .md\:pr-4 {
-    padding-right: 1rem;
-  }
-
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
   }
 
-  .md\:text-xs {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-
   .md\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .md\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 }
 
@@ -1307,11 +1290,6 @@ video {
   .lg\:px-32 {
     padding-left: 8rem;
     padding-right: 8rem;
-  }
-
-  .lg\:px-28 {
-    padding-left: 7rem;
-    padding-right: 7rem;
   }
 
   .lg\:pr-10 {

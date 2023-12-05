@@ -119,8 +119,14 @@
 					<div class="cards md:px-20 flex flex-col justify-center" style="background-image: url(src/asset/Background.png);">
 					  <div class="drop_box flex justify-center flex-col items-center">
 
-						<input type="file" hidden 
-                        name="pdfFile" accept=".pdf" required id="inputFile" style="display:none;">
+						<input 
+                        type="file" 
+                        hidden 
+                        name="pdfFile" 
+                        accept=".pdf" 
+                        required 
+                        id="inputFile" 
+                        style="display:none;">
 						
                         <button class="pt-10 text-xs font-semibold bg-white rounded-full px-6" style="padding-top: 4px; padding-bottom: 4px;">Choose File</button>
 
@@ -189,7 +195,7 @@
         input.addEventListener("change", function (e) {
             var fileName = e.target.files[0].name;
             let filedata = `
-                <form action="convert.php" method="post" enctype="multipart/form-data">
+                <form action="compress.php" method="post" enctype="multipart/form-data">
                     <div class="form">
                         <h4>${fileName}</h4>
                     </div>
