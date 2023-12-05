@@ -92,12 +92,23 @@
   border: none;
   outline: 1px solid #010101;
 }
-.form input {
-  margin: 10px 0;
-  width: 100%;
-  background-color: #e2e2e2;
-  border: none;
-  outline: none;
-  padding: 12px 20px;
-  border-radius: 4px;
+
+[type="file"] {
+  display: none;
 }
+
+#input {
+    opacity: 1;
+    /* position: absolute; */
+    /* z-index: -1; */
+    background-color: #ffffff;
+  }
+
+.file-text {
+margin-top: 4px;
+font-size: 12px;
+color: #333;
+}
+
+
+
