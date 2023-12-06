@@ -24,6 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         unlink($outputFile);
 
         exit();
+    }else {
+        die('Failed to process PDF file.');
     }
 }
 ?>

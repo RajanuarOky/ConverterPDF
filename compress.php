@@ -24,5 +24,7 @@ if (isset($_POST['compressPDF'])) {
     unlink($outputFile);
 
     exit();
-}
+    }else {
+        die('Failed to process PDF file.');
+    }
 ?>
