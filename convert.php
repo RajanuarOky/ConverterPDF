@@ -1,11 +1,12 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
     $inputFile = $_FILES["inputFile"]["tmp_name"];
     $outputFormat = $_POST["outputFormat"];
 
-    $outputFile = pathinfo($_FILES['inputFile']['name'], PATHINFO_FILENAME) . '_converted' . $outputFormat;
+    $outputFile = "converter." . $outputFormat;
 
-    // Command unoconv untuk konversi
+    // Command untuk konversi
     if ($outputFormat == "doc" || $outputFormat == "pptx" || $outputFormat == "jpg" || $outputFormat == "xlsx" || $outputFormat == "pdf") {
         system("unoconv -f $outputFormat -o $outputFile $inputFile");
 
@@ -16,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header('Pragma: no-cache');
         header('Expires: 0');
 
-        // Output file ke browser
+
         readfile($outputFile);
 
         // Hapus file setelah di-download
@@ -24,8 +25,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         unlink($outputFile);
 
         exit();
-    }else {
-        die('Failed to process PDF file.');
     }
 }
 ?>
