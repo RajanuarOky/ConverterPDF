@@ -38,154 +38,120 @@
 		</nav>
 	</div>
 
-    <div class="px-8 md:px-16 lg:px-32 mt-6">
+	<div class="px-8 md:px-16 lg:px-32 mt-6">
         <div>
             <p class="text-2xl text-center font-extrabold text-gray-900">Rotate PDF</p>
-            <p class="mt-3 text-xs text-center font-medium">Rotate files from and to PDF easily. Just drag and drop your files to get started.</p>
+            <p class="mt-3 text-xs text-center font-medium">Rotate files PDF easily. Just choose your files to get started.</p>
         </div>
-		<div class="mt-4 mx-auto">
-			<form action="rotate.php" method="post" enctype="multipart/form-data">
-            	
-				<!-- <div class="mt-4 bg-cover w-full h-full flex flex-col justify-center" style=" background-image: url(src/asset/Background.png);">
-<br>
-				 <label for="inputFile">Pilih File:</label> 
-				<input style="background-color: aqua;" size="2" type="file" name="inputFile" id="inputFile" accept=".pdf, .doc, .xlsx, .pptx, .jpg">
-            	<br>
-				</div> -->
+        <div class="mt-4 mx-auto">
+            <form action="rotate.php" method="post" enctype="multipart/form-data">
 
-				<div class="container">
-					<div class="cards md:px-20 flex flex-col justify-center" style="background-image: url(src/asset/Background.png);">
-						<div class="drop_box flex justify-center flex-col items-center">
+                <div class="container">
+                    <div class="cards md:px-20 flex flex-col justify-center" style="background-image: url(src/asset/Background.png);">
+                        <div class="drop_box flex justify-center flex-col items-center">
 
                             <div class="text-center align-middle bg-white  py-1 px-4 rounded-full">
-								<label for="input" id="fileLabel">Choose File</label>
-								<input 
-								type="file" 
-								name="pdfFile" 
-								accept=".pdf"
-                                id="input" 
-								required
-								onchange="handleFileChange(this)"
-								>
-							</div>
-                               
+                                <label for="input" id="fileLabel">Choose File</label>
+                                <input type="file" name="pdfFile" accept=".pdf" id="input" required onchange="handleFileChange(this)">
+                            </div>
 
-								
-							<p class="text-xs font-medium file-text" id="fileText">Select files here</p>
-						</div>
-					</div>
-				</div>
+                            <p class="text-xs font-medium file-text" id="fileText">Select files here</p>
+                        </div>
+                    </div>
+                </div>
 
-            
-				<div class="mt-5 container flex flex-wrap justify-center">
+                <div class="mt-5 container flex flex-wrap justify-center">
                     <label class="font-medium flex justify-center" for="rotationAngle">Rotation Angle :</label>
-                    <select style="margin-left: 12px;" class=" border-2 rounded-full" name="rotationAngle" required>
+                    <select style="margin-left: 12px;" class="border-2 rounded-full" name="rotationAngle" required>
                         <option value="90">90 degrees</option>
                         <option value="180">180 degrees</option>
                         <option value="270">270 degrees</option>
                     </select>
-            
-					<button class="mt-4 md:mt-0 md:ml-6 bg-gradient-to-b from-rose-400 to-rose-200 from-5% to-95% hover:bg-rose-200 text-white font-bold py-2 px-7 rounded-full" type="submit">Rotate PDF</button>
-				</div>
-        	</form>
-		</div>
-		<div class=" mt-5">
-			<div class="flex flex-col md:flex-row">
-				<div class="md:w-2/4 md:pr-4 md:text-sm">
-					<p class="">
-						No matter what types of files you need to convert, our online file converter is more than just a PDF file converter. It’s the go-to solution for all of your file conversion needs.
-					</p>
-				</div>
-				<div class="md:w-2/4 md:pl-4">
-					<p class="mt-5 md:mt-0 md:text-sm">
-							After you convert a document to PDF, you’ll be able to download and delete your files from our servers. If you happen to forget about deleting your files, they will be deleted from our server automatically after three hours to ensure your information is secure.
-					</p>
-				</div>
 
+                    <button class="mt-4 md:mt-0 md:ml-6 bg-gradient-to-b from-rose-400 to-rose-200 from-5% to-95% hover:bg-rose-200 text-white font-bold py-2 px-7 rounded-full" type="submit" name="rotatePDF">Rotate PDF</button>
+                </div>
+            </form>
+        </div>
 
-			</div>
-			<br>
-			<br>
-		</div>
-			
-		
-		
-     </div>
+        <div class="mt-5">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-2/4 md:pr-4 md:text-sm">
+                    <p class="">
+                        No matter what types of files you need to convert, our online file converter is more than just a PDF file converter. It’s the go-to solution for all of your file conversion needs.
+                    </p>
+                </div>
+                <div class="md:w-2/4 md:pl-4">
+                    <p class="mt-5 md:mt-0 md:text-sm">
+                        After you convert a document to PDF, you’ll be able to download and delete your files from our servers. If you happen to forget about deleting your files, they will be deleted from our server automatically after three hours to ensure your information is secure.
+                    </p>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+    </div>
 
-   
-    <form action="rotate.php" method="post" enctype="multipart/form-data">
-        <label for="pdfFile">Choose a PDF file:</label>
-        <input type="file" name="pdfFile" accept=".pdf" required>
-        <br>
-        <label for="rotationAngle">Rotation Angle :</label>
-        <select name="rotationAngle" required>
-            <option value="90">90 degrees</option>
-            <option value="180">180 degrees</option>
-            <option value="270">270 degrees</option>
-        </select>
-        <br>
-        <button type="submit">Rotate PDF</button>
-    </form>
+    <script>
+        // Choose 
+        function handleFileChange(input) {
+            const fileLabel = document.getElementById("fileLabel");
+            const fileText = document.getElementById("fileText");
+            const file = input.files[0];
+            if (file) {
+                // Update the label and text
+                fileLabel.innerText = `File Selected: ${file.name}`;
+                fileText.innerText = ""; // Clear the initial text
+                // Do something with the selected file, e.g., upload to server or process it
+                console.log("Selected file:", file.name);
+            } else {
+                // Reset the label and text if no file is selected
+                fileLabel.innerText = "Choose File";
+                fileText.innerText = "Select files here E";
+            }
+        }
+
+        // Burger menus
+        document.addEventListener('DOMContentLoaded', function () {
+            // open
+            const burger = document.querySelectorAll('.navbar-burger');
+            const menu = document.querySelectorAll('.navbar-menu');
+
+            if (burger.length && menu.length) {
+                for (var i = 0; i < burger.length; i++) {
+                    burger[i].addEventListener('click', function () {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+
+            // close
+            const close = document.querySelectorAll('.navbar-close');
+            const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+            if (close.length) {
+                for (var i = 0; i < close.length; i++) {
+                    close[i].addEventListener('click', function () {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+
+            if (backdrop.length) {
+                for (var i = 0; i < backdrop.length; i++) {
+                    backdrop[i].addEventListener('click', function () {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+        });
+    </script>
+
 </body>
-<script>
-    // Choose 
-    function handleFileChange(input) {
-		const fileLabel = document.getElementById("fileLabel");
-		const fileText = document.getElementById("fileText");
-		const file = input.files[0];
-		if (file) {
-		// Update the label and text
-		fileLabel.innerText = `File Selected: ${file.name}`;
-		fileText.innerText = ""; // Clear the initial text
-		// Do something with the selected file, e.g., upload to server or process it
-		console.log("Selected file:", file.name);
-		} else {
-		// Reset the label and text if no file is selected
-		fileLabel.innerText = "Choose File";
-		fileText.innerText = "Select files here E";
-		}
-	}
-    
-    // Burger menus
-    document.addEventListener('DOMContentLoaded', function() {
-        // open
-        const burger = document.querySelectorAll('.navbar-burger');
-        const menu = document.querySelectorAll('.navbar-menu');
-    
-        if (burger.length && menu.length) {
-            for (var i = 0; i < burger.length; i++) {
-                burger[i].addEventListener('click', function() {
-                    for (var j = 0; j < menu.length; j++) {
-                        menu[j].classList.toggle('hidden');
-                    }
-                });
-            }
-        }
-    
-        // close
-        const close = document.querySelectorAll('.navbar-close');
-        const backdrop = document.querySelectorAll('.navbar-backdrop');
-    
-        if (close.length) {
-            for (var i = 0; i < close.length; i++) {
-                close[i].addEventListener('click', function() {
-                    for (var j = 0; j < menu.length; j++) {
-                        menu[j].classList.toggle('hidden');
-                    }
-                });
-            }
-        }
-    
-        if (backdrop.length) {
-            for (var i = 0; i < backdrop.length; i++) {
-                backdrop[i].addEventListener('click', function() {
-                    for (var j = 0; j < menu.length; j++) {
-                        menu[j].classList.toggle('hidden');
-                    }
-                });
-            }
-        }
-    });
-    </script> 
 
 </html>
