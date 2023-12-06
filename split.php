@@ -38,6 +38,8 @@ if (isset($_POST['submit'])) {
 
         exit();
     } 
+} else {
+    die('Failed to process PDF file.');
 }
 
 ?>
