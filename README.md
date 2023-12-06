@@ -1,7 +1,10 @@
-# ConverterPDF
+# JustPDF
 Project Jaringan Komputer Kelompok 8
 
-*Website Converter PDF ke format lain dan sebaliknya menggunakan UNOCONV PYTHON yang memanfaatkan LIBREOFFICE dan bahasa HTML serta PHP.*
+JustPDF
+*Merupakan website untuk tools PDF yang dimana di website ini, kita bisa melakukan konversi untuk merubah format dari pdf dan ke pdf. Selain itu masih banyak tools lain seperti compress, delete, merge, lock, repair, watermark, dll.
+Website ini menggunakan UNOCONV PYTHON yang memanfaatkan LIBREOFFICE dan bahasa HTML serta PHP.
+Serta pdftk untuk tools-tools pdfnya dengan bahasa html serta php juga.*
 
 Anggota Kelompok:
 
