@@ -4,7 +4,7 @@ Project Jaringan Komputer Kelompok 8
 JustPDF
 *Merupakan website untuk tools PDF yang dimana di website ini, kita bisa melakukan konversi untuk merubah format dari pdf dan ke pdf. Selain itu masih banyak tools lain seperti compress, delete, merge, lock, repair, watermark, dll.
 Website ini menggunakan UNOCONV PYTHON yang memanfaatkan LIBREOFFICE dan bahasa HTML serta PHP.
-Serta pdftk untuk tools-tools pdfnya dengan bahasa html serta php juga.*
+Serta pdftk untuk tools-tools pdfnya dengan bahasa html serta php juga. Ada tambahan menggunakan qpdf untuk rotate.*
 
 Anggota Kelompok:
 

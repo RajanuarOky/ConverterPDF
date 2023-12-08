@@ -5,23 +5,23 @@ if (isset($_POST['rotatePDF'])) {
     $pdfFile = $_FILES['pdfFile']['tmp_name'];
     $rotationAngle = $_POST['rotationAngle'];
 
-    // Validasi input file
+    // Validasi file input
     if (!file_exists($pdfFile) || !is_uploaded_file($pdfFile)) {
-        die('Invalid PDF file.');
+        die('File PDF tidak valid.');
     }
 
     // Validasi sudut rotasi
     if (!in_array($rotationAngle, ['90', '180', '270'])) {
-        die('Invalid rotation angle.');
+        die('Sudut rotasi tidak valid.');
     }
 
     $outputFile = $uploadsDirectory . pathinfo($_FILES['pdfFile']['name'], PATHINFO_FILENAME) . '_rotated.pdf';
 
-    // Code pdftk untuk merotasi PDF
-    $cmd = "pdftk \"$pdfFile\" cat 1-end$rotationAngle output \"$outputFile\"";
+    // Kode qpdf untuk merotasi PDF
+    $cmd = "qpdf \"$pdfFile\" --rotate=$rotationAngle -- \"$outputFile\"";
     exec($cmd);
 
-    // Set header untuk auto download
+    // Set header untuk mengunduh secara otomatis
     header('Content-Type: application/pdf');
     header('Content-Disposition: attachment; filename="' . basename($outputFile) . '"');
     header('Cache-Control: no-cache, no-store, must-revalidate');
@@ -30,7 +30,7 @@ if (isset($_POST['rotatePDF'])) {
 
     readfile($outputFile);
 
-    // Hapus file setelah di-download
+    // Hapus file setelah diunduh
     unlink($pdfFile);
     unlink($outputFile);
 
