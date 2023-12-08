@@ -6,6 +6,12 @@ JustPDF
 Website ini menggunakan UNOCONV PYTHON yang memanfaatkan LIBREOFFICE dan bahasa HTML serta PHP.
 Serta pdftk untuk tools-tools pdfnya dengan bahasa html serta php juga. Ada tambahan menggunakan qpdf untuk rotate.*
 
+Hal yang harus diinstall:
+unoconv
+libreoffice
+pdftk
+qpdf
+
 Anggota Kelompok:
 
 Rajanuar Oky Giono (5322600002) "RajanuarOky"
